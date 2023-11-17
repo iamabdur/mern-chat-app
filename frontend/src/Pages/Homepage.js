@@ -12,6 +12,8 @@ import { useEffect } from "react";
 import { useHistory } from "react-router";
 import Login from "../components/Authentication/Login";
 import Signup from "../components/Authentication/Signup";
+import logo from './logo.png'
+import { ChakraProvider, Image } from "@chakra-ui/react";
 
 function Homepage() {
   const history = useHistory();
@@ -35,7 +37,9 @@ function Homepage() {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Work sans">
-          Talk-A-Tive
+           <ChakraProvider>
+      <Image src={logo}  alt="Your Alt Text" />
+    </ChakraProvider>
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">

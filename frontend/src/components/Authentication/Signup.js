@@ -69,6 +69,7 @@ const Signup = () => {
         position: "bottom",
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
+      
       setPicLoading(false);
       history.push("/chats");
     } catch (error) {
@@ -100,9 +101,9 @@ const Signup = () => {
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
-      data.append("upload_preset", "chat-app");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
+      data.append("upload_preset", "chatapp");
+      data.append("cloud_name", "di6dokx0u");
+      fetch("https://api.cloudinary.com/v1_1/di6dokx0u/image/upload ", {
         method: "post",
         body: data,
       })
